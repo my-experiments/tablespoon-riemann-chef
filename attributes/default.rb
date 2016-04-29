@@ -2,6 +2,7 @@
 # that the experiment will be excecuted as.
 default[:riemann][:group] = "riemann"
 default[:riemann][:user] = "riemann"
+default[:riemann][:home_dir] = "/usr/local/riemann"
 
 # from karamel-lab/riemann-chef2
 default[:riemann][:download][:url]       = 'http://aphyr.com/riemann/'
@@ -14,9 +15,9 @@ default[:riemann][:config][:port]        =   '5555'
 default[:riemann][:config][:userfile]    =
                   '/usr/local/riemann/etc/user.config'
 
-default[:riemann][:system][:user]        =   'riemann'
-default[:riemann][:system][:group]       =   'riemann'
-default[:riemann][:system][:home_dir]    =   '/usr/local/riemann'
+#default[:riemann][:system][:user]        =   'riemann'
+#default[:riemann][:system][:group]       =   'riemann'
+#default[:riemann][:system][:home_dir]    =   '/usr/local/riemann'
 
 default[:java][:jdk_version] = '8'
 default[:java][:install_flavor] = 'oracle'

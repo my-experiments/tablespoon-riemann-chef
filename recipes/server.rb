@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: riemann2
+# Cookbook Name:: riemann
 # Recipe:: server
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
@@ -30,7 +30,7 @@ conf_dir = ::File.join(
 include_recipe 'runit'
 include_recipe 'java'
 include_recipe 'ark'
-include_recipe 'riemann2::infra'
+include_recipe 'riemann::infra'
 
 ark 'riemann' do
   url "#{node['riemann']['download']['url']}riemann-#{node['riemann']['download']['version']}.tar.bz2"

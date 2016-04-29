@@ -37,4 +37,4 @@ end
   end
 end
 
-runit_service 'riemann-dash'
+#runit_service 'riemann-dash'

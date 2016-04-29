@@ -6,7 +6,7 @@ description      'Installs/Configures/Runs riemann'
 version          "0.1"
 
 recipe            "riemann::install", "Experiment setup for riemann"
-recipe            "riemann::experiment",  "configFile=; Experiment name: experiment"
+recipe            "riemann::dash",  "Dash setup"
 
 
 depends "kagent"

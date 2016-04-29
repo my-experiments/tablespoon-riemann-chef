@@ -10,7 +10,7 @@ recipe            "riemann::experiment",  "configFile=; Experiment name: experim
 
 
 depends "kagent"
-
+depends "runit"
 
 
 %w{ ubuntu debian rhel centos }.each do |os|

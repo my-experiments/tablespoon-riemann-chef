@@ -1,0 +1,8 @@
+dependencies:
+  - recipe: riemann::install
+  - recipe: riemann::experiment
+    local:
+      - riemann::install
+    global:
+
+

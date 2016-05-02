@@ -33,7 +33,7 @@ end
     owner node[:riemann][:user]
     group node[:riemann][:group]
     mode '0644'
-    action :create
+    action :create_if_missing
   end
 end
 

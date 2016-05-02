@@ -11,6 +11,8 @@ recipe            "riemann::dash",  "Dash setup"
 
 depends "kagent"
 depends "runit"
+depends "java"
+depends "ark"
 
 
 %w{ ubuntu debian rhel centos }.each do |os|

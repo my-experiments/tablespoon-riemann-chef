@@ -8,7 +8,7 @@
 (let [host "<%= node['riemann']['config']['bind'] %>"]
   (tcp-server :host host :port <%= node['riemann']['config']['port'] %> )
   (udp-server :host host :port <%= node['riemann']['config']['port'] %> )
-  (ws-server  :host host :port <%= node['riemann']['config']['ws-port'] %> ))
+;  (ws-server  :host host :port <%= node['riemann']['config']['ws-port'] %> ))
 
 ; Expire old events from the index every 5 seconds.
 (periodically-expire 5)

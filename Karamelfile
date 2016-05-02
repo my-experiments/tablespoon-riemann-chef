@@ -1,8 +1,12 @@
 dependencies:
   - recipe: riemann::install
   - recipe: riemann::infra
+  - recipe: riemann::dash
     local:
-      - riemann::install
+      - riemann::infra
+  - recipe: riemann::server
+    local:
+      - riemann::infra
     global:
-
+      
 

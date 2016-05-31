@@ -5,7 +5,7 @@
 
 ; Listen on the local interface over TCP (5555), UDP (5555), and websockets
 ; (5556)
-(let [host "<%= node.riemann.config.bind %>"]
+(let [host "<%= node.riemann.server.bind %>"]
   (tcp-server :host host :port <%= node.riemann.server.port %> )
   (ws-server  :host host :port <%= node.riemann.dash.port %> ))
 

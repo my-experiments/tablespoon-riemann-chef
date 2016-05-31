@@ -34,7 +34,3 @@ attribute "riemann/server/port",
 :description => "riemann server port number",
 :type => "string"
 
-attribute "riemann/server/ip",
-:description => "riemann server ip address",
-:type => "string"
-

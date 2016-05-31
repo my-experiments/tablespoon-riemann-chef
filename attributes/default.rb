@@ -9,7 +9,8 @@ default[:riemann][:download][:url]       = 'http://aphyr.com/riemann/'
 default[:riemann][:download][:checksum]  = 'ec697519e80781dc478983de04204760f2790da1715acfd233b35da071be5455'
 default[:riemann][:download][:version]   = '0.2.10'
 
-default[:riemann][:server][:ip]        =   '0.0.0.0'
+default[:riemann][:server][:ip]          =   ''
+default[:riemann][:server][:bind]        =   '0.0.0.0'
 default[:riemann][:server][:port]        =   '5555'
 default[:riemann][:dash][:port]          =   '5556'     
 default[:riemann][:config][:userfile]    =

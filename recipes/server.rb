@@ -63,4 +63,3 @@ file node['riemann']['config']['userfile'] do
 end
 
 node.default['riemann']['server']['ip']   = node['ipaddress']
-node.default['riemann']['server']['port']  = node['riemann']['config']['port']

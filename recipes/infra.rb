@@ -8,15 +8,15 @@
 Configure user and group for riemann-servie and riemann-dash
 #>
 =end
-group node['riemann']['group'] do
+group node.riemann.group do
   action :create
 end
 
-user node['riemann']['user'] do
+user node.riemann.user do
   action :create
-  home node['riemann']['home_dir']
+  home node.riemann.home_dir
   comment 'Riemann User'
   system true
-  gid node['riemann']['group']
+  gid node.riemann.group
   shell '/bin/false'
 end

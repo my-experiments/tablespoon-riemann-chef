@@ -5,10 +5,9 @@
 
 ; Listen on the local interface over TCP (5555), UDP (5555), and websockets
 ; (5556)
-(let [host "<%= node['riemann']['config']['bind'] %>"]
-  (tcp-server :host host :port <%= node['riemann']['config']['port'] %> )
-  (udp-server :host host :port <%= node['riemann']['config']['port'] %> )
-  (ws-server  :host host :port <%= node['riemann']['config']['ws-port'] %> ))
+(let [host "<%= node.riemann.config.bind %>"]
+  (tcp-server :host host :port <%= node.riemann.server.port %> )
+  (ws-server  :host host :port <%= node.riemann.dash.port %> ))
 
 ; Expire old events from the index every 5 seconds.
 (periodically-expire 5)
@@ -31,4 +30,4 @@
       (fn [event] (info "expired" event)))
 ))
 
-(include "<%= File.join(node['riemann']['home_dir'], 'etc', 'user.config') %>")
+(include "<%= File.join(node.riemann.home_dir, 'etc', 'user.config') %>")

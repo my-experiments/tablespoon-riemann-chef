@@ -61,5 +61,3 @@ file node.riemann.config.userfile do
   action :create_if_missing
   mode '0644'
 end
-
-node.default.riemann.server.ip   = node.ipaddress

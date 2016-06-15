@@ -12,16 +12,6 @@ TODO:
 #>
 =end
 
-case node.platform_family
-when 'debian'
-  include_recipe 'apt'
-when 'rhel'
-  include_recipe 'yum'
-else
-  log 'Platform Not Supported'
-  exit 1
-end
-
 conf_dir = ::File.join(
   node.riemann.home_dir,
   'etc'

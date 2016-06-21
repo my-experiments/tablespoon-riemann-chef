@@ -10,8 +10,6 @@ recipe            "riemann::dash",    "Dashboard setup"
 recipe            "riemann::server",  "server setup" 
 
 
-depends "kagent"
-depends "runit"
 depends "java"
 depends "ark"
 

@@ -17,8 +17,8 @@ group node.riemann.group do
 end
 
 
-private_ip = my_private_ip()
-public_ip = my_public_ip()
+private_ip = node.private_ips[0]
+public_ip = node.public_ips[0]
 
 
 

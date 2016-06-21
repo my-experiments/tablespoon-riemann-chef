@@ -11,7 +11,6 @@ TODO:
 #>
 =end
 
-include_recipe 'runit'
 include_recipe 'riemann::infra'
 
 chef_gem 'riemann-dash' do
@@ -37,4 +36,9 @@ end
   end
 end
 
-runit_service 'riemann-dash'
+service "riemann-dash" do
+    provider Chef::Provider::Service::Init::Debian
+    supports :restart => true, :stop => true, :start => true, :status => true
+    action :start
+end
+

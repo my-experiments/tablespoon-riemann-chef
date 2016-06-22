@@ -17,6 +17,7 @@ conf_dir = ::File.join(
   'etc'
 )
 
+include_recipe 'runit'
 include_recipe 'java'
 include_recipe 'ark'
 include_recipe 'riemann::infra'

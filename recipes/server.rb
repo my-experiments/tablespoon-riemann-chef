@@ -42,15 +42,11 @@ template ::File.join(conf_dir, 'riemann.config') do
   mode '0644'
 end
 
+runit_service 'riemann-server'
+
 file node.riemann.config.userfile do
   owner node.riemann.user
   group node.riemann.group
   action :create_if_missing
   mode '0644'
-end
-
-service "riemann-server" do
-    provider Chef::Provider::Service::Init::Debian
-    supports :restart => true, :stop => true, :start => true, :status => true
-    action :start
 end

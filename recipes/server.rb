@@ -13,7 +13,9 @@ TODO:
 =end
 include_recipe 'runit'
 
-runit_service "chef-client"
+runit_service "riemann-server" do
+  default_logger true
+end
 
 =begin
 script 'start_riemann_server' do

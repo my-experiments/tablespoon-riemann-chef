@@ -35,22 +35,20 @@ ark 'riemann' do
   action :install
 end
 
-link '/etc/riemann' do
-  to node.riemann.conf_dir
-end
-
-template node.riemann.conf_file do
+template node.riemann.config_file do
   owner node.riemann.user
   group node.riemann.group
   source 'riemann.config.erb'
   mode '0644'
 end
 
-file node.riemann.config.userfile do
+file node.riemann.config_userfile do
   owner node.riemann.user
   group node.riemann.group
   action :create_if_missing
   mode '0644'
 end
 
-
+link '/etc/riemann' do
+  to node.riemann.config_dir
+end

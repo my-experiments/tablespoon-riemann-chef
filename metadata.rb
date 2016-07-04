@@ -1,5 +1,5 @@
 name             'riemann'
-maintainer       "riemann"
+maintainer       "Kamal Hakimzadeh"
 maintainer_email "k.hakimzadeh@gmail.com"
 license          "Apache v2.0"
 description      'Installs/Configures/Runs riemann'
@@ -10,9 +10,9 @@ recipe            "riemann::dash",    "Dashboard setup"
 recipe            "riemann::server",  "server setup" 
 
 
-depends "runit"
 depends "java"
 depends "ark"
+depends "runit"
 
 
 %w{ ubuntu debian rhel centos }.each do |os|

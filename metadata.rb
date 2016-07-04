@@ -1,4 +1,4 @@
-name             'tablespoon-riemann'
+name             'riemann'
 maintainer       "Kamal Hakimzadeh"
 maintainer_email "k.hakimzadeh@gmail.com"
 license          "Apache v2.0"

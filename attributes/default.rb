@@ -3,7 +3,8 @@
 default.riemann.group = "riemann"
 default.riemann.user = "riemann"
 default.riemann.install_dir = "/usr/local/riemann"
-default.riemann.config.userfile    =   "#{node.riemann.install_dir}/etc/user.config"
+default.riemann.config_dir    =   "#{node.riemann.install_dir}/etc"
+default.riemann.config.userfile    =   "#{node.riemann.conf_dir}/user.config"
 
 default.riemann.download.url       = 'http://aphyr.com/riemann/'
 default.riemann.download.checksum  = 'ec697519e80781dc478983de04204760f2790da1715acfd233b35da071be5455'

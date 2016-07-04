@@ -35,16 +35,11 @@ ark 'riemann' do
   action :install
 end
 
-conf_dir = ::File.join(
-  node.riemann.install_dir,
-  'etc'
-)
-
 link '/etc/riemann' do
-  to conf_dir
+  to node.riemann.conf_dir
 end
 
-template ::File.join(conf_dir, 'riemann.config') do
+template ::File.join(node.riemann.conf_dir, 'riemann.config') do
   owner node.riemann.user
   group node.riemann.group
   source 'riemann.config.erb'

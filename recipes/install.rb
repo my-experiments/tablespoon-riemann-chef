@@ -31,12 +31,12 @@ ark 'riemann' do
   version node.riemann.download.version
   checksum node.riemann.download.checksum
   owner node.riemann.user
-  home_dir node.riemann.home_dir
+  home_dir node.riemann.install_dir
   action :install
 end
 
 conf_dir = ::File.join(
-  node.riemann.home_dir,
+  node.riemann.install_dir,
   'etc'
 )
 

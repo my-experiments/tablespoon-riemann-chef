@@ -18,6 +18,7 @@ script 'start_riemann_server' do
   group node.riemann.group
   interpreter "bash"
   code <<-EOM
-.#{node.riemann.install_dir}/bin/riemann #{node.riemann.config_file}
+cd #{node.riemann.install_dir} 
+./bin/riemann #{node.riemann.config_file}
   EOM
 end

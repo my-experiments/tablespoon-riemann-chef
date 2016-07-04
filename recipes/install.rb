@@ -39,7 +39,7 @@ link '/etc/riemann' do
   to node.riemann.conf_dir
 end
 
-template ::File.join(node.riemann.conf_dir, 'riemann.config') do
+template node.riemann.conf_file do
   owner node.riemann.user
   group node.riemann.group
   source 'riemann.config.erb'

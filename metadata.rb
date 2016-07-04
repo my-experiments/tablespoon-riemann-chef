@@ -12,6 +12,7 @@ recipe            "riemann::server",  "server setup"
 
 depends "java"
 depends "ark"
+depends "runit"
 
 
 %w{ ubuntu debian rhel centos }.each do |os|

@@ -1,5 +1,5 @@
-name             'riemann'
-maintainer       "riemann"
+name             'tablespoon-riemann'
+maintainer       "Kamal Hakimzadeh"
 maintainer_email "k.hakimzadeh@gmail.com"
 license          "Apache v2.0"
 description      'Installs/Configures/Runs riemann'

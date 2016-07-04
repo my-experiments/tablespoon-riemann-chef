@@ -16,16 +16,3 @@ include_recipe 'runit'
 runit_service "riemann-server" do
   default_logger true
 end
-
-=begin
-script 'start_riemann_server' do
-  cwd "/tmp"
-  user node.riemann.user
-  group node.riemann.group
-  interpreter "bash"
-  code <<-EOM
-cd #{node.riemann.install_dir} 
-./bin/riemann #{node.riemann.config_file}
-  EOM
-end
-=end

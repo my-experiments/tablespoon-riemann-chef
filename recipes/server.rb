@@ -11,7 +11,11 @@ TODO:
   
 #>
 =end
+include_recipe 'runit'
 
+runit_service "chef-client"
+
+=begin
 script 'start_riemann_server' do
   cwd "/tmp"
   user node.riemann.user
@@ -22,3 +26,4 @@ cd #{node.riemann.install_dir}
 ./bin/riemann #{node.riemann.config_file}
   EOM
 end
+=end

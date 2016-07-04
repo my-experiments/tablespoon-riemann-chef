@@ -12,6 +12,7 @@ end
 user node.riemann.user do
   supports :manage_home => true
   home "/home/#{node.riemann.user}"
+  group "#{node.riemann.group}" 
   action :create
   system true
   shell "/bin/bash"

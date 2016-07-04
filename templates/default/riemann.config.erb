@@ -30,4 +30,4 @@
       (fn [event] (info "expired" event)))
 ))
 
-(include "<%= File.join(node.riemann.home_dir, 'etc', 'user.config') %>")
+(include "<%= node.riemann.config_userfile %>")

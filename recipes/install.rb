@@ -10,16 +10,17 @@ group node.riemann.group do
 end
 
 user node.riemann.user do
-  action :create
   supports :manage_home => true
   home "/home/#{node.riemann.user}"
+  action :create
+  system true
   shell "/bin/bash"
   not_if "getent passwd #{node.riemann.user}"
 end
 
 group node.riemann.group do
   action :modify
-  members ["#{node.riemann.user}"]
+   members ["#{node.riemann.user}"]
   append true
 end
 

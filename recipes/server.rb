@@ -12,4 +12,12 @@ TODO:
 #>
 =end
 
-runit_service 'riemann-server'
+script 'start_riemann_server' do
+  cwd "/tmp"
+  user node.riemann.user
+  group node.riemann.group
+  interpreter "bash"
+  code <<-EOM
+.#{node.riemann.install_dir}/bin/riemann #{node.riemann.config_file}
+  EOM
+end
